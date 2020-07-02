@@ -37,8 +37,10 @@ RUN yum install -y gcc-gfortran netcdf-devel
 COPY --from=base /install_eco1280 /install_eco1280
 COPY --from=base /workdir/build_libemos/tools /libemos_tools
 
+RUN chmod -R 777 /install_eco1280 && chmod -R 777 /libemos_tools
+
 ADD https://www.cira.colostate.edu/wp-content/uploads/2018/10/ECO1280_int_scripts.tar .
-RUN mkdir /ECO1280_int_scripts && \
+RUN mkdir /ECO1280_int_scripts && chmod 777 /ECO1280_int_scripts && \
 tar xf ECO1280_int_scripts.tar -C /ECO1280_int_scripts && \
 rm ECO1280_int_scripts.tar
 
