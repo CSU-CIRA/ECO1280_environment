@@ -35,7 +35,7 @@ on the host (provided that you are working in a linux-like environment), use
 `id -u [user name]` and `id -g [group name]`.
 
 To create and run a container from the image, use
-`docker run -it --name eco1280_convert -u uid:gid -v /path/to/data/on/host:/path/to/dat/in/the/container eco1280_convert:1.0`,
+`docker run -it --name eco1280_convert -u uid:gid -v /path/to/data/on/host:/path/to/data/in/the/container eco1280_convert:1.0`,
 adding -v flags before the image name as necessary to provide any data mounts
 needed for the code to be able to access the necessary input data.
 Again, the `--name` is optional but makes the container easily locatable.
