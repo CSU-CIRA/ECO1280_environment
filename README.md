@@ -32,7 +32,7 @@ the container to avoid messy security issues. For compatability with
 the host machine, you can use your user and preferred group ids in the
 container, or if compatability is not an issue, you may simply create a new user:group identification for the container. To get your user and group id
 on the host (provided that you are working in a linux-like environment), use
-`id -u [`user name]` and `id -g [group name]`.
+`id -u [user name]` and `id -g [group name]`.
 
 To create and run a container from the image, use
 `docker run -it --name eco1280_convert -u uid:gid -v /path/to/data/on/host:/path/to/dat/in/the/container eco1280_convert:1.0`,
